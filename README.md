@@ -73,36 +73,36 @@ yarn run cypress open
 
 ```
 .
-**├── cypress**                -> testing
-**├── public/
-│   ├── locales**            -> file terjemahan
-**│   └── images**             -> file gambar
-**├── src/
-│   ├── components**         -> general component
-**│   ├── configs**            -> config env, auth, i18n, dll.
-**│   ├── dataservices**       -> api dan slice
-**│   ├── helpers**            -> fungsi helper dan hooks
-**│   ├── init**               -> inisialisasi awal (system)
-**│   │   ├── store**            -> inisialisasi configuration redux store
-**│   │   ├── i18n.ts**          -> inisialisasi i18n for internationalization
-**│   │   ├── baseQuery.ts**     -> inisialisasi api query
-**│   │   └── config.ts**        -> inisialisasi config
-**│   ├── layout**             -> template web layout
-**│   ├── pages**              -> main page user
-**│   ├── themes**             -> customization theme
-**│   ├── types**              -> general type
-**│   ├── viewport**           -> inisialisasi awal (view)
-**│   │   ├── page**            -> halaman kecil (page not found, loading, dll.)
-**│   │   ├── Scene**           -> inisialisasi route
-**│   │   ├── HasReduxStore**   -> inisialisasi viewport store
-**│   ├── App.tsx
+├── cypress                -> testing
+├── public/
+│   ├── locales            -> file terjemahan
+│   └── images             -> file gambar
+├── src/
+│   ├── components         -> general component
+│   ├── configs            -> config env, auth, i18n, dll.
+│   ├── dataservices       -> api dan slice
+│   ├── helpers            -> fungsi helper dan hooks
+│   ├── init               -> inisialisasi awal (system)
+│   │   ├── store            -> inisialisasi configuration redux store
+│   │   ├── i18n.ts          -> inisialisasi i18n for internationalization
+│   │   ├── baseQuery.ts     -> inisialisasi api query
+│   │   └── config.ts        -> inisialisasi config
+│   ├── layout             -> template web layout
+│   ├── pages              -> main page user
+│   ├── themes             -> customization theme
+│   ├── types              -> general type
+│   ├── viewport           -> inisialisasi awal (view)
+│   │   ├── page            -> halaman kecil (page not found, loading, dll.)
+│   │   ├── Scene           -> inisialisasi route
+│   │   ├── HasReduxStore   -> inisialisasi viewport store
+│   ├── App.tsx
 │   ├── index.css
 │   └── main.tsx
-├── .env**                   -> react environtment
-**├── .eslintrc.cjs**          -> pengaturan rule eslint
-**├── .prettierrc.cjs**        -> pengaturan opsi prettier
-**├── vite.config.ts
-└── ...**
+├── .env                   -> react environtment
+├── .eslintrc.cjs          -> pengaturan rule eslint
+├── .prettierrc.cjs        -> pengaturan opsi prettier
+├── vite.config.ts
+└── ...
 ```
 
 **Linter**

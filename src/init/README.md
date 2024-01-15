@@ -5,8 +5,8 @@ Folder init berisi fungsi-fungsi yang merupakan inisialisasi awal sistem. Inisia
 Pada boilerplate, telah terdapat beberapa inisialisasi yang dibuat dari awal yaitu i18n.ts, config,ts, baseQuery.ts dan folder store.
 
 ```
-│   ├── **init/**
-│   │   ├── **store/**
+│   ├── init/
+│   │   ├── store/
 │   │   │   ├── store.middlewares.ts    -> create middleware from api
 │   │   │   ├── store.rootReducer.ts    -> create reducer from api
 │   │   │   └── store.ts                -> konfigurasi utama store

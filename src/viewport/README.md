@@ -7,8 +7,8 @@ Contohnya yaitu penerapan react-router, redux store, authentication, authorizati
 Pada boilerplate sudah terdapat tiga jenis sub-folder viewport:
 
 ```
-│   ├── viewport**/**
-│   │   ├── HasReduxStore**/**
+│   ├── viewport/
+│   │   ├── HasReduxStore/
 │   │   │   ├── HasReduxStore.ts
 │   │   │   └── index.ts
 │   │   ├── page
@@ -43,6 +43,7 @@ Mengatur implementasi dari react-router. Terdapat beberapa file yang terdapat pa
 - RouteLogger.tsx → berisi konfigurasi "logger" untuk route
 - routing.item.ts → berisi list item router yang terdapat pada aplikasi react
 - Scene.tsx → implementasi react-router-dom
+
   ```tsx
   import { Suspense } from 'react';
   import { BrowserRouter, Route, Routes } from 'react-router-dom';
