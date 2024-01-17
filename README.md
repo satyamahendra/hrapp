@@ -1,24 +1,28 @@
+## Root
+
 ## Frontend Boilerplate React
 
 Boilerplate adalah kerangka kerja awal yang telah disiapkan dengan konfigurasi dasar dan struktur file yang umum digunakan untuk memulai pengembangan proyek. Web Boilerplate React ini memberikan fondasi untuk memulai pengembangan aplikasi web menggunakan React.js.
 
 Boilerplate ini dibangun dengan :
 
-- [Vite](https://vitejs.dev/)  5.0.8  & [React](https://react.dev/)  18.2.0
+- [Vite](https://vitejs.dev/)  4.2.0  & [React](https://react.dev/)  18.2.0
 - [Typescript](https://www.typescriptlang.org/docs/handbook/intro.html) : memungkinkan penggunaan tipe data statis pada pengembangan aplikasi
 - [Redux](https://redux.js.org/introduction/getting-started) 9.0.4  & [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started) 2.0.1 : menggunakan state management redux
 - [React Router dom](https://reactrouter.com/en/main) 6.21.1 : terintegrasi dengan react-router untuk  menangani navigasi di aplikasi React
-- [i18next](https://www.i18next.com/) 23.7.16 : terintegrasi dengan Internationalization  memungkinkan pengembang menyiapkan aplikasi mereka untuk mendukung multibahasa dan mengelola teks yang dapat diterjemahkan dengan mudah.
+- [i18next](https://www.i18next.com/) 23.7.16 : terintegrasi dengan Internationalization memungkinkan pengembang menyiapkan aplikasi mereka untuk mendukung multibahasa dan mengelola teks yang dapat diterjemahkan dengan mudah.
 - [Cypress](https://www.cypress.io/) : menggunakan cypress sebagai integration & e2e testing
 - [ESLint](https://eslint.org/) 8.0.1 : Terintegrasi dengan ESLint untuk membantu menjaga kualitas kode dan memastikan bahwa kode mematuhi standar tertentu.
 - [Prettier](https://prettier.io/) 3.1.1 : Menggunakan Prettier untuk memformat kode secara otomatis dan menjaga konsistensi dalam gaya penulisan kode.
+
+---
 
 ### **Quick Start**
 
 1. Pastikan anda memiliki Node.js dan yarn
 2. Clone repo menggunakan git clone ……
 
-   ```
+   ```bash
    git clone https://gitlab.skwn.dev/research-fe-mo/web-boilerplate-react-js.git <PROJECT_NAME>
    ```
 
@@ -26,54 +30,52 @@ Boilerplate ini dibangun dengan :
 4. Pindah ke branch relesases
 
    ```
-   git checkout releases/release-boilerplate-v1
+   git checkout development
    ```
 
 5. Install dependencies : yarn install
 
-   ```
+   ```bash
    yarn install
    ```
 
-6. Install DevDependencies : yarn install -D
+6. Mulai membangun aplikasi web react
 
-   ```
-   yarn install -D
-   ```
-
-7. Mulai membangun aplikasi web react
+---
 
 ### **Command Line Commands**
 
 Running App
 
-```
+```bash
 yarn start
 ```
 
 Run linter
 
-```
+```bash
 yarn lint
 ```
 
 Run auto-fix linter
 
-```
+```bash
 yarn lint -- --fix
 ```
 
 Run cypress
 
-```
+```bash
 yarn run cypress open
 ```
+
+---
 
 ### **Folder Structure**
 
 ```
 .
-├── cypress                -> testing
+├── cypress            -> testing
 ├── public/
 │   ├── locales            -> file terjemahan
 │   └── images             -> file gambar
@@ -101,11 +103,14 @@ yarn run cypress open
 ├── .env                   -> react environtment
 ├── .eslintrc.cjs          -> pengaturan rule eslint
 ├── .prettierrc.cjs        -> pengaturan opsi prettier
+├── cypress.config.ts      -> konfigurasi cypress
 ├── vite.config.ts
 └── ...
 ```
 
-**Linter**
+---
+
+### **Linter**
 
 Pada boilerplate react ini, extension eslint yang diterapkan yaitu style guide standard-with-typescript, plugin react dan prettier recommended. Terdapat pengaturan tambahan yang diterapkan untuk menghindari error yang tidak diinginkan, yaitu pada **`.eslintrc.cjs` .** Jika menonaktifkan atau mengaktifkan error dari eslint, maka dapat mengatur konfigurasi pada rules eslint :
 
@@ -120,11 +125,13 @@ module.exports = {
 };
 ```
 
-**Vite .env**
+---
 
-File .env digunakan untuk menyimpan variabel environment atau konfigurasi yang diperlukan oleh aplikasi. Ini bisa mencakup URL API, kunci API, atau pengaturan environment lainnya.
+### V**ite `.env`**
 
-```
+File `.env` digunakan untuk menyimpan variabel environment atau konfigurasi yang diperlukan oleh aplikasi. Ini bisa mencakup URL API, kunci API, atau pengaturan environment lainnya.
+
+```bash
 VITE_APP_TITLE = ""
 VITE_APP_VERSION = "v 1.0"
 VITE_APP_STATE_PERSIST_KEY = ""
@@ -133,7 +140,47 @@ VITE_APP_DUMMY_APIURL = http://localhost:3000
 
 Dalam proyek React, variabel yang dimulai dengan **`VITE_APP_{NAMA_ENV}`** secara otomatis akan diunggah ke objek
 
-**Path Aliases**
+---
+
+### **Cypress Configuration**
+
+Konfigurasi cypress terdapat pada file `cypress.config.ts`, konfigurasi meliputi konfigurasi untuk e2e testing dan component testing. Anda dapat menambahkan beberapa konfigurasi yang dibutuhkan pada file ini, opsi konfigurasi cypress dapat dilihat pada [docs cypress (configuration)](https://docs.cypress.io/guides/references/configuration). Pada boilerplate ini, terdapat konfigurasi awal yang telah didefinisikan, meliputi spec pattern component testing dan base URL e2e testing :
+
+```tsx
+import { defineConfig } from 'cypress';
+
+export default defineConfig({
+  component: {
+    devServer: {
+      framework: 'react',
+      bundler: 'vite',
+    },
+    specPattern: [
+      'src/**/*.cy.{js,jsx,ts,tsx}',
+      'cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
+    ],
+  },
+
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
+    baseUrl: 'http://localhost:5173/',
+  },
+});
+```
+
+Dari pengaturan config tersebut, maka penempatan untuk file testing adalah :
+
+**e2e testing** → `cypress/e2e`
+
+**integration testing** → `cypress/integration`
+
+**unit testing** → pada directory yang sama seperti file yang akan dilakukan testing (pada folder-folder yang ada di `src`)
+
+---
+
+### **Path Aliases**
 
 Path aliases dalam proyek React digunakan untuk membuat rute (paths) yang lebih singkat dan mudah dibaca pada saat mengimpor file atau modul. Pada boilerplate ini sudah terdapat konfigurasi path aliases dari directory yang ada, jika ingin menambah directory maka dapat menambahkannya pada file `vite.config.ts` dan `tsconfig.json`:
 
@@ -156,7 +203,7 @@ export default defineConfig({
       types: `${path.resolve(__dirname, './src/types/')}`,
       themes: `${path.resolve(__dirname, './src/themes/')}`,
       viewport: `${path.resolve(__dirname, './src/viewport/')}`,
-			*// tambahkan path lain pada baris ini*
+      // tambahkan path lain pada baris ini
     },
   },
 });
@@ -179,9 +226,9 @@ export default defineConfig({
       "layouts/*": ["src/layouts/*"],
       "pages/*": ["src/pages/*"],
       "types/*": ["src/types/*"],
-      "themes/*": ["src/themes/*"],
-			*// tambahkan path lain pada baris ini*
+      "themes/*": ["src/themes/*"]
+      // tambahkan path lain pada baris ini
     }
-  },
+  }
 }
 ```

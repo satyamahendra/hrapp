@@ -1,6 +1,6 @@
-## Folder ‘configs’
+## Folder `configs`
 
-Folder configs berisi modul konfigurasi general yang digunakan dalam aplikasi web. Modul ini digunakan untuk menyimpan konfigurasi aplikasi, seperti konfigurasi URL, firebase, token, auth dll.
+Folder `configs` berisi modul konfigurasi general yang digunakan dalam aplikasi web. Modul ini digunakan untuk menyimpan konfigurasi aplikasi, seperti konfigurasi URL, firebase, token, auth dll.
 
 Pada boilerplate ini sudah terdapat config utama, yaitu pada file index.ts, file ini berisi beberapa konfigurasi pengambilan variable environment dan juga konfigurasi i18n, sbb:
 
@@ -25,4 +25,4 @@ const config = {
 export default config;
 ```
 
-Pada folder configs juga dapat menambahkan beberapa file konfigurasi sistem website yang dibutuhkan.
+Pada folder `configs` juga dapat menambahkan beberapa file konfigurasi sistem website yang dibutuhkan.

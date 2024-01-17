@@ -1,14 +1,14 @@
-## Folder ‘viewport’
+## Folder `viewport`
 
-Folder viewport digunakan sebagai inisialisasi elemen awal yang akan di export ke dalam file App.tsx. Pada folder viewport ini, dapat dilakukan inisialisasi yang berhubungan dengan elemen component dari App. Inisialisasi yang dimaksut dalam konteks presentational component.
+Folder `viewport` digunakan sebagai inisialisasi elemen awal yang akan di export ke dalam file App.tsx. Pada folder viewport ini, dapat dilakukan inisialisasi yang berhubungan dengan elemen component dari App. Inisialisasi yang dimaksut dalam konteks presentational component.
 
 Contohnya yaitu penerapan react-router, redux store, authentication, authorization, penerapan layout, dll.
 
 Pada boilerplate sudah terdapat tiga jenis sub-folder viewport:
 
 ```
-│   ├── viewport/
-│   │   ├── HasReduxStore/
+│   ├── viewport**/**
+│   │   ├── HasReduxStore**/**
 │   │   │   ├── HasReduxStore.ts
 │   │   │   └── index.ts
 │   │   ├── page
@@ -19,7 +19,7 @@ Pada boilerplate sudah terdapat tiga jenis sub-folder viewport:
 │   │   │   └── index.ts
 ```
 
-### **HasReduxStore**
+### Folder **`HasReduxStore`**
 
 Mengatur implementasi Redux Store dalam aplikasi React.
 
@@ -36,7 +36,7 @@ const HasReduxStore = ({ children }: { children: ReactNode }) => (
 export default HasReduxStore;
 ```
 
-### **Scene**
+### Folder **`Scene`**
 
 Mengatur implementasi dari react-router. Terdapat beberapa file yang terdapat pada folder ini,
 
@@ -60,7 +60,7 @@ Mengatur implementasi dari react-router. Terdapat beberapa file yang terdapat pa
   export default Scene;
   ```
 
-### **page**
+### folder **`page`**
 
 Folder page dalam viewport, berisi page-page kecil yang dibutuhkan dalam aplikasi react, contohnya sbb:
 
@@ -73,5 +73,3 @@ Folder page dalam viewport, berisi page-page kecil yang dibutuhkan dalam aplikas
 | Page Forbidden (403 Error) | Halaman ini ditampilkan ketika pengguna tidak memiliki izin untuk mengakses halaman. Karena Access denied despite valid authentication. Focuses on authorization restrictions (permissions). |
 | Page unauthorized (401) | Halaman ini ditampilkan ketika pengguna tidak memiliki izin untuk mengakses halaman. Karena Missing or invalid authentication credentials. Focuses on authentication issues (credentials). |
 | Maintenance Page | Halaman ini digunakan ketika situs atau aplikasi sedang dalam proses pemeliharaan atau perbaikan, dan tidak dapat diakses oleh pengguna selama periode tersebut. |
-
-.
