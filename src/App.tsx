@@ -5,13 +5,13 @@ import 'init/i18n';
 import HasReduxStore from './viewport/HasReduxStore';
 import Scene from './viewport/Scene';
 
-function App() {
+const App = () => {
   return (
     <HasReduxStore>
       <ToastContainer />
       <Scene />
     </HasReduxStore>
   );
-}
+};
 
 export default App;
