@@ -23,7 +23,7 @@ Boilerplate ini dibangun dengan :
 2. Install boilerplate
 
    ```bash
-   npx fe-reactjs-boilerplate <PROJECT_NAME>
+   npx skwn-reactjs-boilerplate <PROJECT_NAME>
    ```
 
 3. Mulai membangun aplikasi web react
