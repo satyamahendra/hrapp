@@ -1,13 +1,13 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import Backend, { type BackendOptions } from 'i18next-xhr-backend';
+import Backend, { type HttpBackendOptions } from 'i18next-http-backend';
 
 import { getConfig } from 'init/config';
 
 i18n
   .use(Backend)
   .use(initReactI18next)
-  .init<BackendOptions>({
+  .init<HttpBackendOptions>({
     backend: {
       loadPath: getConfig('i18n.loadPath'),
     },
