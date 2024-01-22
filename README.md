@@ -20,13 +20,23 @@ Boilerplate ini dibangun dengan :
 ### **Quick Start**
 
 1. Pastikan anda memiliki Node.js dan yarn
-2. Install boilerplate
+2. Clone repo dan install dependencies menggunakan
 
    ```bash
-   npx skwn-reactjs-boilerplate <PROJECT_NAME>
+   npx web-react-boilerplate <PROJECT_NAME>
    ```
 
-3. Mulai membangun aplikasi web react
+3. Pindah ke directory yang sesuai `cd <PROJECT_NAME>`
+4. Hapus folder .git
+   - Pada windows
+     ```
+     rmdir .git
+     ```
+   - Pada Linux dan macOS
+     ```
+     rm -rf .git
+     ```
+5. Mulai membangun aplikasi web react
 
 ---
 
