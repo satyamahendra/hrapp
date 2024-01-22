@@ -20,23 +20,15 @@ Boilerplate ini dibangun dengan :
 ### **Quick Start**
 
 1. Pastikan anda memiliki Node.js dan yarn
-2. Clone repo dan install dependencies menggunakan
+2. Jalankan command di bawah menggunakan terminal (git bash, powershell, atau cmd) untuk melakukan clone repository, install dependencies, dan hapus semua config git pada folder .git
 
    ```bash
    npx web-react-boilerplate <PROJECT_NAME>
    ```
 
 3. Pindah ke directory yang sesuai `cd <PROJECT_NAME>`
-4. Hapus folder .git
-   - Pada windows
-     ```
-     rmdir .git
-     ```
-   - Pada Linux dan macOS
-     ```
-     rm -rf .git
-     ```
-5. Mulai membangun aplikasi web react
+4. Pastikan folder `.git` terhapus dan tidak ada history commit git pada tiap file
+5. Mulai membangun aplikasi web react (ubah name app pada `package.json` dan `.env`)
 
 ---
 
