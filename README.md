@@ -27,7 +27,7 @@ Boilerplate ini dibangun dengan :
 3. Jalankan command di bawah ini untuk mendownload repository
 
    ```bash
-   tiged https://gitlab.skwn.dev/rnd/web-boilerplate-react-js#development <PROJECT_NAME>
+   tiged https://gitlab.skwn.dev/rnd/web-boilerplate-react-js <PROJECT_NAME>
    ```
 
 4. Pindah ke directory yang sesuai `cd <PROJECT_NAME>`
