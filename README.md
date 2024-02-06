@@ -33,11 +33,9 @@ Boilerplate ini dibangun dengan :
 4. Pindah ke directory yang sesuai `cd <PROJECT_NAME>`
 5. install dependency dan dev dependency
 
-```bash
+   ```bash
    yarn install
-   npm install
-   pnpm install
-```
+   ```
 
 6. Mulai membangun aplikasi web react (ubah name app pada `package.json` dan `.env`)
 
