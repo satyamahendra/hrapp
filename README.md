@@ -20,15 +20,26 @@ Boilerplate ini dibangun dengan :
 ### **Quick Start**
 
 1. Pastikan anda memiliki Node.js dan yarn
-2. Jalankan command di bawah menggunakan terminal (git bash, powershell, atau cmd) untuk melakukan clone repository, install dependencies, dan hapus semua config git pada folder .git
+2. Pastikan telah terinstall tiged secara global
+   ```bash
+   npm install -g tiged
+   ```
+3. Jalankan command di bawah ini untuk mendownload repository
 
    ```bash
-   npx web-react-boilerplate <PROJECT_NAME>
+   tiged https://gitlab.skwn.dev/rnd/web-boilerplate-react-js#development <PROJECT_NAME>
    ```
 
-3. Pindah ke directory yang sesuai `cd <PROJECT_NAME>`
-4. Pastikan folder `.git` terhapus dan tidak ada history commit git pada tiap file
-5. Mulai membangun aplikasi web react (ubah name app pada `package.json` dan `.env`)
+4. Pindah ke directory yang sesuai `cd <PROJECT_NAME>`
+5. install dependency dan dev dependency
+
+```bash
+   yarn install
+   npm install
+   pnpm install
+```
+
+6. Mulai membangun aplikasi web react (ubah name app pada `package.json` dan `.env`)
 
 ---
 
