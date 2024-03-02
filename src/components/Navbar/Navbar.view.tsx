@@ -1,12 +1,6 @@
 import { Link } from 'react-router-dom';
 import { LuBellRing } from 'react-icons/lu';
-
-interface NavbarViewProps {
-  navsArray: {
-    name: string;
-    url: string;
-  }[];
-}
+import { NavbarViewProps } from './Navbar.type';
 
 const NavbarView: React.FC<NavbarViewProps> = ({ navsArray }) => {
   return (

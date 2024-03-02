@@ -13,9 +13,9 @@ const SidebarView: React.FC<SidebarViewProps> = ({ navsArray }) => (
             <li key={nav.url}>
               <Link
                 to={nav.url}
-                className="flex gap-4 p-2 duration-200 hover:bg-blue-100 rounded-xl hover:text-blue-500"
+                className="flex items-center gap-4 p-2 duration-200 hover:bg-blue-100 rounded-xl hover:text-blue-500"
               >
-                <div className="w-6 h-6 bg-gray-100 rounded-lg"></div>
+                <div className="text-xl">{nav.icon}</div>
                 {nav.name}
               </Link>
             </li>
