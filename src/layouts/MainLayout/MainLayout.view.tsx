@@ -1,16 +1,17 @@
+import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 import { Outlet } from 'react-router-dom';
 
 const MainLayoutView = () => (
-  <main className="flex">
+  <main className="flex min-h-screen">
     {/* SIDEBAR */}
-    <div className="w-1/6">
+    <div className="w-96">
       <Sidebar />
     </div>
 
     {/* NAVBAR */}
-    <div className="w-4/6">
-      <nav>navbar</nav>
+    <div className="w-full">
+      <Navbar />
       <Outlet />
     </div>
   </main>
