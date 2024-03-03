@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
-export const useIsSmallScreen = (): boolean => {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+export const useIsMobile = (): boolean => {
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
-      setIsSmallScreen(windowWidth > 640);
+      setIsMobile(windowWidth < 640);
     };
 
     // Initial check on component mount
@@ -19,5 +19,5 @@ export const useIsSmallScreen = (): boolean => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return isSmallScreen;
+  return isMobile;
 };

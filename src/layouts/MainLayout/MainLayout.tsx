@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import MainLayoutView from './MainLayout.view';
-import { useIsSmallScreen } from '@/helpers/hooks/useIsSmallScreen';
+import { useIsMobile } from '@/helpers/hooks/useIsMobile';
 import { useLocation } from 'react-router-dom';
 
 const MainLayout = () => {
@@ -8,22 +8,22 @@ const MainLayout = () => {
 
   const { pathname } = useLocation();
 
-  const isSmallScreen = useIsSmallScreen();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     // kalau screennya < 640px (mobile mode), toggle false.
-    if (isSmallScreen) {
+    if (!isMobile) {
       setToggleNavbar(true);
     }
     // kalau screennya > 640px (edsktop mode), toggle true.
-    if (!isSmallScreen) {
+    if (isMobile) {
       setToggleNavbar(false);
     }
-  }, [isSmallScreen]);
+  }, [isMobile]);
 
   // auto close sidebar when mobiel mode
   useEffect(() => {
-    if (!isSmallScreen) {
+    if (isMobile) {
       setToggleNavbar(false);
     }
   }, [pathname]);
