@@ -3,7 +3,7 @@ import { SidebarViewProps } from './Sidebar.type';
 import React from 'react';
 
 const SidebarView: React.FC<SidebarViewProps> = ({ navsArray }) => (
-  <aside className="w-full h-screen bg-white border-r">
+  <aside className="w-full min-h-screen bg-white border-r">
     <h1 className="py-6 text-3xl text-center text-yellow-400">HIVE</h1>
     <ul className="flex flex-col h-full gap-4 px-6 overflow-auto text-nowrap">
       {navsArray.map((group, i: number) => (

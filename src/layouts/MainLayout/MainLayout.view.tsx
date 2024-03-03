@@ -9,7 +9,7 @@ const MainLayoutView: React.FC<MainLayoutViewProps> = ({
   toggleNavbar,
   setToggleNavbar,
 }) => (
-  <main className="flex w-screen min-h-screen">
+  <main className="flex min-h-screen">
     {/* TOGGLE SIDEBAR BUTTON */}
     <button
       onClick={() => setToggleNavbar((prev) => !prev)}
