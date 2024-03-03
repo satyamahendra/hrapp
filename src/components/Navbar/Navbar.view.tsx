@@ -4,9 +4,10 @@ import { NavbarViewProps } from './Navbar.type';
 
 const NavbarView: React.FC<NavbarViewProps> = ({ navsArray }) => {
   return (
-    <header className="flex items-center justify-between w-full p-6 border-b">
-      <nav>
-        <ul className="flex gap-6">
+    <header className="flex flex-col-reverse items-center justify-between w-full px-6 py-6 pb-3 border-b sm:pb-6 sm:flex-row">
+      {/* TABS */}
+      <nav className="w-full mt-4 sm:mt-0">
+        <ul className="flex gap-6 pb-3 overflow-auto sm:pb-0 text-nowrap">
           {navsArray.map((nav) => (
             <NavLink
               key={nav.name}
@@ -23,11 +24,12 @@ const NavbarView: React.FC<NavbarViewProps> = ({ navsArray }) => {
         </ul>
       </nav>
 
-      <div className="flex h-12 gap-2">
-        <div className="flex items-center justify-center text-xl border rounded-lg aspect-square">
+      {/* PROFILE  */}
+      <div className="flex self-end h-12 gap-2">
+        <div className="flex items-center justify-center w-12 h-12 text-xl border rounded-lg aspect-square">
           <LuBellRing />
         </div>
-        <div className="flex gap-2 p-3 border rounded-lg">
+        <div className="flex gap-2 p-3 border rounded-lg text-nowrap">
           <p>
             <span className="text-gray-400">Good Day,</span> Satya!
           </p>
