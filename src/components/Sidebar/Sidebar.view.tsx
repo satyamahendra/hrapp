@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { SidebarViewProps } from './Sidebar.type';
 import React from 'react';
 
@@ -9,15 +9,20 @@ const SidebarView: React.FC<SidebarViewProps> = ({ navsArray }) => (
       {navsArray.map((group, i: number) => (
         <React.Fragment key={i}>
           <h2 className="text-gray-400">{group.group}</h2>
-          {group.navs.map((nav) => (
+          {group.navs.map((nav, i: number) => (
             <li key={nav.url}>
-              <Link
+              <NavLink
+                end={i === 0}
                 to={nav.url}
-                className="flex items-center gap-4 p-2 duration-200 hover:bg-blue-100 rounded-xl hover:text-blue-500"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? 'bg-blue-100 text-blue-500' : ''
+                  } flex items-center gap-4 px-3 py-2 duration-200 hover:bg-blue-200 rounded-lg hover:text-blue-600`
+                }
               >
                 <div className="text-xl">{nav.icon}</div>
                 {nav.name}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </React.Fragment>

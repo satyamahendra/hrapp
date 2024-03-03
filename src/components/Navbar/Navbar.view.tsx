@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { LuBellRing } from 'react-icons/lu';
 import { NavbarViewProps } from './Navbar.type';
 
@@ -8,13 +8,17 @@ const NavbarView: React.FC<NavbarViewProps> = ({ navsArray }) => {
       <nav>
         <ul className="flex gap-6">
           {navsArray.map((nav) => (
-            <Link
+            <NavLink
               key={nav.name}
               to={nav.url}
-              className="px-3 py-2 rounded-lg hover:bg-gray-100"
+              className={({ isActive }) =>
+                `${
+                  isActive ? 'bg-gray-100' : ''
+                } hover:bg-gray-200 px-3 py-2 rounded-lg duration-200`
+              }
             >
               {nav.name}
-            </Link>
+            </NavLink>
           ))}
         </ul>
       </nav>

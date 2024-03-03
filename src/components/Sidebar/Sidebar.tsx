@@ -78,7 +78,7 @@ const Sidebar = () => {
       return [
         {
           group: '',
-          navs: [{ name: 'Home', url: '/attendance', icon: <PiHouse /> }],
+          navs: [{ name: 'Home', url: '/company-verse', icon: <PiHouse /> }],
         },
         {
           group: 'Structure Organization',
@@ -143,7 +143,7 @@ const Sidebar = () => {
     return [
       {
         group: '',
-        navs: [{ name: 'Home', url: '/project-verse', icon: <PiHouse /> }],
+        navs: [{ name: 'Home', url: '/setting', icon: <PiHouse /> }],
       },
     ];
   }
