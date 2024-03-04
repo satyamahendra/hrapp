@@ -7,6 +7,7 @@ import MyAttendance from '@/pages/Attendance/MyAttendance';
 import Dashboard from '@/pages/Manage-data/Dashboard';
 import Chart from '@/pages/Report/Chart';
 import Users from '@/pages/Setting/Users';
+import EmploymentStatus from '@/pages/Manage-data/Employment-status';
 
 const Scene = () => (
   <Suspense>
@@ -23,10 +24,14 @@ const Scene = () => (
               element={<MyAttendance />}
             />
 
-            {/* COMPANY VERSE TAB */}
+            {/* MANAGE TAB */}
             <Route path="/manage-data" element={<Dashboard />} />
+            <Route
+              path="/manage-data/employment-status"
+              element={<EmploymentStatus />}
+            />
 
-            {/* PROJECT VERSE TAB */}
+            {/* REPORT TAB */}
             <Route path="/report" element={<Chart />} />
 
             {/* SETTIG TAB */}
