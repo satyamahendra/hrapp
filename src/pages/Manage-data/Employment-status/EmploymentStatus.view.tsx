@@ -4,9 +4,12 @@ import {
   EmploymentStatus,
   EmploymentStatusViewProps,
 } from './EmploymentStatus.type';
+import AddEmploymentStatus from './AddEmploymentStatus';
 
 const EmploymentStatusView: React.FC<EmploymentStatusViewProps> = ({
   employmentStatusArray,
+  toggleAddSlider,
+  setToggleAddSlider,
 }) => (
   <main>
     <section className="flex justify-between ">
@@ -28,7 +31,10 @@ const EmploymentStatusView: React.FC<EmploymentStatusViewProps> = ({
         <select className="px-4 border rounded-lg ">
           <option className="">Status</option>
         </select>
-        <button className="px-4 text-white bg-[#2166B2] rounded-lg">
+        <button
+          onClick={() => setToggleAddSlider(true)}
+          className="px-4 text-white bg-[#2166B2] rounded-lg"
+        >
           + Add new
         </button>
       </div>
@@ -78,6 +84,11 @@ const EmploymentStatusView: React.FC<EmploymentStatusViewProps> = ({
         </div>
       </div>
     </section>
+
+    {/* SLIDER ADD EMPLOYMENT STATUS */}
+    {toggleAddSlider && (
+      <AddEmploymentStatus setToggleAddSlider={setToggleAddSlider} />
+    )}
   </main>
 );
 

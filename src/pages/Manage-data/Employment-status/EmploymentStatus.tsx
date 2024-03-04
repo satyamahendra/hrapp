@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import EmploymentStatusView from './EmploymentStatus.view';
 
 const EmploymentStatus = () => {
+  const [toggleAddSlider, setToggleAddSlider] = useState(true);
+
   const employmentStatusArray = [
     {
       statusName: 'intern',
@@ -44,7 +47,13 @@ const EmploymentStatus = () => {
     },
   ];
 
-  return <EmploymentStatusView employmentStatusArray={employmentStatusArray} />;
+  return (
+    <EmploymentStatusView
+      employmentStatusArray={employmentStatusArray}
+      toggleAddSlider={toggleAddSlider}
+      setToggleAddSlider={setToggleAddSlider}
+    />
+  );
 };
 
 export default EmploymentStatus;

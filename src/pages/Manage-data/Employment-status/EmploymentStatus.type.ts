@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react';
+
 export interface EmploymentStatus {
   statusName: string;
   description: string;
@@ -11,4 +13,6 @@ export interface EmploymentStatus {
 
 export interface EmploymentStatusViewProps {
   employmentStatusArray: EmploymentStatus[];
+  toggleAddSlider: boolean;
+  setToggleAddSlider: Dispatch<SetStateAction<boolean>>;
 }
