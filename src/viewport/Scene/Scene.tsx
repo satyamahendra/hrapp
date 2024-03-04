@@ -4,9 +4,9 @@ import RouteLogger from './RouteLogger';
 import MainLayout from '@/layouts/MainLayout';
 import AttendanceHome from '@/pages/Attendance/AttendanceHome';
 import MyAttendance from '@/pages/Attendance/MyAttendance';
-import CompanyVerseHome from '@/pages/Company-verse/CompanyVerseHome';
-import ProjectVerseHome from '@/pages/Project-verse/ProjectVerseHome';
-import SettingHome from '@/pages/Setting/SettingHome';
+import Dashboard from '@/pages/Manage-data/Dashboard';
+import Chart from '@/pages/Report/Chart';
+import Users from '@/pages/Setting/Users';
 
 const Scene = () => (
   <Suspense>
@@ -24,13 +24,13 @@ const Scene = () => (
             />
 
             {/* COMPANY VERSE TAB */}
-            <Route path="/manage-data" element={<CompanyVerseHome />} />
+            <Route path="/manage-data" element={<Dashboard />} />
 
             {/* PROJECT VERSE TAB */}
-            <Route path="/report" element={<ProjectVerseHome />} />
+            <Route path="/report" element={<Chart />} />
 
             {/* SETTIG TAB */}
-            <Route path="/setting" element={<SettingHome />} />
+            <Route path="/setting" element={<Users />} />
           </Route>
         </Routes>
       </RouteLogger>
