@@ -24,10 +24,10 @@ const Scene = () => (
             />
 
             {/* COMPANY VERSE TAB */}
-            <Route path="/company-verse" element={<CompanyVerseHome />} />
+            <Route path="/manage-data" element={<CompanyVerseHome />} />
 
             {/* PROJECT VERSE TAB */}
-            <Route path="/project-verse" element={<ProjectVerseHome />} />
+            <Route path="/report" element={<ProjectVerseHome />} />
 
             {/* SETTIG TAB */}
             <Route path="/setting" element={<SettingHome />} />

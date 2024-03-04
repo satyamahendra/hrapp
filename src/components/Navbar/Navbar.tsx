@@ -3,8 +3,8 @@ import NavbarView from './Navbar.view';
 const Navbar = () => {
   const navsArray = [
     { name: 'Attendance', url: '/attendance' },
-    { name: 'Company-verse', url: '/company-verse' },
-    { name: 'Project-verse', url: '/project-verse' },
+    { name: 'Manage Data', url: '/manage-data' },
+    { name: 'Report', url: '/report' },
     { name: 'Setting', url: '/setting' },
   ];
 
